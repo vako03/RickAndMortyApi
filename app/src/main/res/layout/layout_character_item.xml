@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_height"
+    android:layout_marginBottom="@dimen/margin_medium"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/card_bg"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="7dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginStart="@dimen/image_margin_left"
+            android:layout_marginTop="@dimen/image_margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:lines="2"
+            android:singleLine="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/ivAvatar"
+            app:layout_constraintStart_toStartOf="@id/ivAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/ivAvatar"
+            tools:text="Big morty" />
+
+        <View
+            android:id="@+id/v_status"
+            android:layout_width="@dimen/circle_status_size"
+            android:layout_height="@dimen/circle_status_size"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:background="@drawable/circle_red"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+            app:layout_constraintTop_toTopOf="@id/ivAvatar" />
+
+        <TextView
+            android:id="@+id/tvAlive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/v_status"
+            app:layout_constraintStart_toEndOf="@+id/v_status"
+            app:layout_constraintTop_toTopOf="@id/v_status"
+            tools:text="Dead - human" />
+
+        <TextView
+            android:id="@+id/tvLastLocationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:gravity="center"
+            android:text="@string/last_location"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/v_status"
+            app:layout_constraintTop_toBottomOf="@id/v_status" />
+
+        <TextView
+            android:id="@+id/tvLastLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_smaller"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/v_status"
+            app:layout_constraintTop_toBottomOf="@id/tvLastLocationTitle"
+            tools:text="Citadel of Ricks" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:text="@string/gender"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/v_status"
+            app:layout_constraintTop_toBottomOf="@id/tvLastLocation" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/v_status"
+            app:layout_constraintTop_toBottomOf="@+id/tvGender"
+            tools:srcCompat="@drawable/ic_male" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
