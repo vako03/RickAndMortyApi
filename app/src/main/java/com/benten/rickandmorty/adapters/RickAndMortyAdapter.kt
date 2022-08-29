@@ -29,6 +29,7 @@ class RickAndMortyAdapter() : RecyclerView.Adapter<RickAndMortyAdapter.RickAndMo
         Glide.with(holder.itemView.context).load(character.image).into(holder.binding.ivAvatar)
         holder.binding.tvName.text = character.name
         holder.binding.tvLastLocation.text=character.location.name
+        holder.binding.tvAlive.text=character.status
 
     }
 
